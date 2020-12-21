@@ -1,0 +1,448 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Description" content="Design by :Donkey" />
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>简历</title>
+    <link href="/zh-cn/images/style.css" rel="stylesheet" type="text/css" />
+    <script language="JavaScript" src="/zh-cn/images/js.js" type="text/javascript" ></script>
+    <style type="text/css">
+        <!--
+        body{
+            font-size:12px;
+            background:#609391 url(http://www.gzsp.com/zh-cn/images/bks.gif);
+        }
+        input{ background:#ecf9ff}
+        textarea{ background:#ecf9ff}
+        select{ background:#ecf9ff}
+        .STYLE1 {color: #ecf9ff}
+        /*================================提交按钮==========================*/
+        .buttonArea{ text-align:right; padding:0 10px 0 10px;}
+        .btn_mouseout
+        {
+            width:80px;height:40px;
+            border:#ecf9ff 1px solid;
+            padding:1px;
+            font-size: 12px;
+            cursor: pointer;
+            color: #666;
+            filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ecf9ff, EndColorStr=#ecf9ff);
+        }
+        .btn_mouseover
+        {
+            width:80px;height:40px;
+            border: #ecf9ff 1px solid;
+            padding: 1px;
+            font-size: 12px;
+            cursor: pointer;
+            color: #f60;
+            filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ecf9ff, EndColorStr=#ecf9ff);
+        }
+        .btn_mousedown
+        {
+            width:80px;height:40px;
+            border:#ecf9ff 1px solid;
+            padding: 1px;
+            font-size: 12px;
+            cursor: pointer;
+            color: #f60;
+            filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ecf9ff, EndColorStr=#ecf9ff);
+        }
+        .btn_mouseup
+        {
+            width:80px;height:40px;
+            border:#ecf9ff 1px solid;
+            padding: 1px;
+            font-size: 12px;
+            cursor: pointer;
+            color:#f60;
+            filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ecf9ff, EndColorStr=#ecf9ff);
+        }
+        -->
+    </style>
+    <script language="JavaScript" type="text/javascript">
+        <!--
+        /****************
+         js制作阿蒙
+         *****************/
+        var itemArray = new Array("xm","sfzhm","xm2","hj","tel","xzz","byyx","by_year","xm222","textarea","jyzk");//把需要输入的输入框id放到这个数组里
+        var labelArray = new Array("用户名","身份证号码","出生日期","户籍","联系电话","住址","毕业院校","毕业时间","所学专业","计算机水平","受教育情况");//把对应的输入框名字放在这里
+        function funsubmit(){
+            var len = itemArray.length;
+            for(i=0;i<len;i++){
+                if(eval("document.all."+itemArray[i]+".value") == ""){
+                    alert(labelArray[i]+" 不能为空！");
+                    eval("document.all."+itemArray[i]+".focus()");
+                    eval("document.all."+itemArray[i]+".style.backgroundColor='#ecf9ff'");
+                    return false;
+                }
+            }
+        }
+        function blank(obj){
+            if(obj.value.length != 0){
+                obj.style.backgroundColor="";
+            }
+        }
+        //-->
+    </script>
+</head>
+<body>
+<input class="button" name="Submit " type="submit" value="返回" onclick="javascript:history.back()"  style="background-color:yellow"/>
+<div class="content3"  >
+    <form name="frmdemo" method="post" action="http://cmp.gzsp.com:8090/zp/spzp.php" id="sqd1" onSubmit="return funsubmit();">
+        <div align="center"><strong>冶香简历</strong>
+        </div>
+        <table width="690" border="1" align="center" cellspacing="0" bordercolorlight="#ecf9ff" bordercolordark="#ecf9ff" bgcolor="#ecf9ff">
+            <tr>
+                <td><div align="center" style="padding-top:5px"><strong>个人简历</strong></div></td>
+            </tr>
+        </table>
+        <table width="690" border="1" align="center" cellspacing="0" bordercolorlight="#ecf9ff" bordercolordark="##ecf9ff" bgcolor="#ecf9ff" class="f12">
+            <tbody>
+            <tr>
+                <td width="75" align="middle" bgcolor="#ebebeb">姓  名</td>
+                <td width="214"><input onPropertyChange="blank(this)" class="alcatel" maxlength="18" size="18" value="冶香" name="xm" />
+                    <font color="#ecf9ff">*</font></td>
+                <td width="92" align="middle" bgcolor="#ecf9ff">性  别</td>
+                <td width="291">
+                    <select class="alcatel" name="xb">
+                        <option selected="selected">女</option>
+                        <option>男</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td align="middle">身份证号</td>
+                <td><input onPropertyChange="blank(this)" class="alcatel" maxlength="18" size="18" name="sfzhm" value="640324199712151243" />
+                    <font color="#ff0000">*</font></td>
+                <td align="middle">出生日期</td>
+                <td><input onPropertyChange="blank(this)" class="alcatel" size="18" value="1997-12" name="xm2" />
+                    <span class="STYLE1">*</span></td>
+            </tr>
+            <tr>
+                <td align="middle" bgcolor="#ebebeb">政治面貌</td>
+                <td><select class="alcatel" name="zzmm">
+                    <option
+                            selected="selected">群众</option>
+                    <option>团员</option>
+                    <option>党员</option>
+                    <option>民主人士</option>
+                </select>        </td>
+                <td align="middle" bgcolor="#ecf9ff">户  籍</td>
+                <td><input onPropertyChange="blank(this)" name="hj" class="alcatel" value="宁夏省同心县" size="18" />
+                    <font
+                            color="#ecf9ff">*</font></td>
+            </tr>
+            <tr>
+                <td align="middle">婚姻状况</td>
+                <td><select class="alcatel" name="hyzk">
+                    <option selected="selected">未婚</option>
+                    <option>已婚</option>
+                </select></td>
+                <td align="middle">视力状况</td>
+                <td><input onPropertyChange="blank(this)" class="alcatel" maxlength="4" size="4" name="slzk"value="5.5" /></td>
+            </tr>
+            <tr>
+                <td align="middle" bgcolor="#ebebeb">身高/厘米</td>
+                <td><input onPropertyChange="blank(this)" class="alcatel" maxlength="3" size="3" value="158cm" name="sg" /></td>
+                <td align="middle" bgcolor="#ebebeb">体重/公斤</td>
+                <td><input onPropertyChange="blank(this)" class="alcatel" maxlength="3" size="3" name="tz" value="52KG"/></td>
+            </tr>
+            <tr>
+                <td align="middle">民  族</td>
+                <td><select class="alcatel" name="mz">
+                    <option
+                            selected="selected">回族</option>
+                    <option>蒙古族</option>
+                    <option>汉族</option>
+                    <option>藏族</option>
+                    <option>维吾尔族</option>
+                    <option>苗族</option>
+                    <option>彝族</option>
+                    <option>壮族</option>
+                    <option>布依族</option>
+                    <option>朝鲜族</option>
+                    <option>满族</option>
+                    <option>侗族</option>
+                    <option>瑶族</option>
+                    <option>白族</option>
+                    <option>土家族</option>
+                    <option>哈尼族</option>
+                    <option>哈萨克族</option>
+                    <option>傣族</option>
+                    <option>黎族</option>
+                    <option>僳僳族</option>
+                    <option>佤族</option>
+                    <option>畲族</option>
+                    <option>高山族</option>
+                    <option>拉祜</option>
+                    <option>水族</option>
+                    <option>东乡族</option>
+                    <option>纳西族</option>
+                    <option>景颇族</option>
+                    <option>柯尔克孜</option>
+                    <option>土族</option>
+                    <option>达斡尔族</option>
+                    <option>仫佬族</option>
+                    <option>羌族</option>
+                    <option>布朗族</option>
+                    <option>撒拉族</option>
+                    <option>毛难族</option>
+                    <option>仡佬族</option>
+                    <option>锡伯族</option>
+                    <option>阿昌族</option>
+                    <option>普米族</option>
+                    <option>塔吉克族</option>
+                    <option>怒族</option>
+                    <option>乌孜别克</option>
+                    <option>俄罗斯族</option>
+                    <option>鄂温克族</option>
+                    <option>崩龙族</option>
+                    <option>保安族</option>
+                    <option>裕固族</option>
+                    <option>京族</option>
+                    <option>塔塔尔族</option>
+                    <option>独龙族</option>
+                    <option>鄂伦春族</option>
+                    <option>赫哲族</option>
+                    <option>门巴族</option>
+                    <option>珞巴族</option>
+                    <option>基诺族</option>
+                    <option>青族</option>
+                    <option>其他</option>
+                </select>        </td>
+                <td align="middle">电  话</td>
+                <td><input onPropertyChange="blank(this)" class="alcatel" maxlength="18" size="18" value="13409534439" name="tel" />
+                    <font color="#ecf9ff">*</font></td>
+            </tr>
+            <tr>
+                <td align="middle" bgcolor="#ecf9ff">现 住 址</td>
+                <td colspan="3"><input onPropertyChange="blank(this)" class="alcatel" maxlength="70" size="70"  value="宁夏同心县"
+                                       name="xzz" />
+                    <font color="#ff0000">*</font></td>
+            </tr>
+            </tbody>
+        </table>
+        <table width="690"
+               border="1" align="center" cellpadding="0" cellspacing="0" bordercolorlight="#D1D1D1" bordercolordark="#ecf9ff" bgcolor="#ecf9ff" class="f12">
+            <tbody>
+            <tr>
+                <td align="middle" width="75">毕业院校</td>
+                <td width="315"><input onPropertyChange="blank(this)" class="alcatel" maxlength="30" value="宁夏大学新华学院" name="byyx" />
+                    <font color="#ecf9ff">*</font></td>
+                <td class="f12" align="middle" width="65" bordercolorlight="#D1D1D1" bordercolordark="#ecf9ff">毕业日期</td>
+                <td width="225" bordercolorlight="#D1D1D1" bordercolordark="#ecf9ff" class="f12"><input onPropertyChange="blank(this)" class="alcatel" maxlength="15"  value="2022-06"
+                                                                                                        size="15" name="by_year" />
+                    <font color="#ecf9ff">*</font></td>
+            </tr>
+            <tr>
+                <td class="f12" align="middle" bgcolor="#ecf9ff"
+                    bordercolorlight="#D1D1D1" bordercolordark="#ecf9ff">所学专业</td>
+                <td class="f12" bordercolorlight="#D1D1D1" bordercolordark="#ecf9ff"><input onPropertyChange="blank(this)" class="alcatel" maxlength="10" size="10" value="电子商务" name="xm222" />
+                    <font color="#ecf9ff">*</font></td>
+                <td class="f12" align="middle" bgcolor="#ebebeb"
+                    bordercolorlight="#D1D1D1" bordercolordark="#ecf9ff">最高学历</td>
+                <td class="f12" bordercolorlight="#D1D1D1" bordercolordark="#ecf9ff"><select class="alcatel" name="zgxl">
+                    <option>初中</option>
+                    <option>高中</option>
+                    <option>中专</option>
+                    <option>大专</option>
+                    <option selected="selected">本科</option>
+                    <option>硕士</option>
+                    <option>博士</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td class="f12" align="middle" bordercolorlight="#ecf9ff" bordercolordark="#ecf9ff">英语水平</td>
+                <td class="f12" bordercolorlight="#ecf9ff" bordercolordark="#ecf9ff"><select class="alcatel"
+                                                                                             name="yysp">
+                    <option>一般</option>
+                    <option
+                            selected="selected">四级</option>
+                    <option>六级</option>
+                    <option>专业四级</option>
+                    <option>专业八级</option>
+                    <option>托福</option>
+                    <option>GRE</option>
+                    <option>雅思</option>
+                </select>        </td>
+                <td class="f12" align="middle" bordercolorlight="#D1D1D1" bordercolordark="#ecf9ff"> </td>
+                <td class="f12" bordercolorlight="#D1D1D1" bordercolordark="#ecf9ff"> </td>
+            </tr>
+            <tr>
+                <td align="middle" bordercolorlight="#D1D1D1" bordercolordark="#ecf9ff" bgcolor="#ecf9ff" class="f12">计<br />
+                    算<br />
+                    机<br />
+                    水<br />
+                    平<br />
+                    特<br />
+                    长</td>
+                <td colspan="3" bordercolorlight="#D1D1D1" bordercolordark="#ecf9ff" bgcolor="#FFFFF7" class="f12"><font color="#ff0000">
+          <textarea onPropertyChange="blank(this)" name="textarea" rows="8" cols="80"  >
+1：myeclispes的使用;
+2：java代码的编程编写;
+3：vue,React,css,javascript等代码的编写,
+4：jQuery。easy-ui等的使用;
+5：Ideal,ApiCloud,FBuilderEclipse开发工具的熟悉使用
+6：Spring，Spring-mvc,Hibernate,Struts2,Cloud,Boot等流行框架的搭建使用
+7：腾讯云存储开发，阿里云计算涉猎
+  </textarea>
+                    <font color="#ecf9ff">*</font>        </font></td>
+            </tr>
+            </tbody>
+        </table>
+        <table width="690"
+               border="1" align="center" cellspacing="0" bordercolorlight="#ecf9ff" bordercolordark="#ecf9ff" bgcolor="#ffffff" class="f12">
+            <tbody>
+            <tr>
+                <td align="middle" width="70"
+                    rowspan="2">受<br />
+                    教<br />
+                    育<br />
+                    及<br />
+                    培<br />
+                    训<br />
+                    状<br />
+                    况</td>
+                <td colspan="5"><span   lang="en-us" xml:lang="en-us">学 校 名 称      专  业     年 月至  年 月   取得文凭/资格证书</span></td>
+            </tr>
+            <tr>
+                <td colspan="5" bordercolorlight="#ecf9ff" bordercolordark="#ecf9ff" bgcolor="#ecf9ff" class="f12"><font color="#ff0000">
+<textarea onPropertyChange="blank(this)" name="jyzk" rows="8" cols="80">
+
+
+1计算机等级考试二级合格证书，普通话水平测试等级证书，
+
+    </br>
+
+
+    2：银川市第三届大学生创业营销挑战赛晋级决赛荣誉证书，2019“极暖创青春”杯银川市第四届大学生创业营销挑战赛荣誉证书。
+</textarea>
+                    <font color="#ecf9ff"><font color="##ecf9ff">*</font></font> </td>
+            </tr>
+            </tbody>
+        </table>
+        <table width="690"
+               border="1" align="center" cellspacing="0" bordercolorlight="#D1D1D1" bordercolordark="#ecf9ff" bgcolor="#ffffff" class="f12">
+            <tbody>
+            <tr>
+                <td width="70"
+                    rowspan="2" align="middle" bgcolor="#ecf9ff">工<br />
+                    作<br />
+                    经<br />
+                    历<br />
+                    摘<br />
+                    要</td>
+                <td colspan="5" bgcolor="#ecf9ff">年 月至  年 月    在何单位、部门    何职位、职责    离职原因</td>
+            </tr>
+            <tr>
+                <td colspan="5" bgcolor="#ecf9ff"><textarea name="gzjl" rows="12" cols="80">
+
+
+在淘宝开过店铺，经营过一年，还学着在跨境平台开店铺，上传。
+2、假期在餐厅兼职两个月，辅导过小学生
+</textarea></td>
+            </tr>
+            </tbody>
+        </table>
+        <table width="690"
+               border="1" align="center" cellspacing="0" bordercolorlight="#D1D1D1" bordercolordark="#ffffff" bgcolor="#ffffff" class="f12">
+            <tbody>
+            <tr>
+                <td width="70" height="85" align="middle">自<br />
+                    我<br />
+                    评<br />
+                    价<br /></td>
+                <td colspan="5"><textarea name="textarea2" rows="6" cols="80">
+本人性格开朗、稳重、有活力，待人热情、真诚；工作认真负责，积极主动，能吃苦耐劳，用于承受压力，勇于创新；
+
+
+有很强的组织能力和团队协作精神，具有较强的适应能力；纪律性强，工作积极配合。
+
+
+对待工作认真负责，善于沟通、协调有较强的组织能力与团队精神；能熟练使用办公软件
+
+
+性格开朗，待人诚恳，上进心强，处事稳重踏实，适应能力强，
+
+
+对工作认证负责有较强的事业心和责任感，本人爱好广泛，求知欲望强，
+
+
+生活中严格要求自己，热爱集体,尊重他人，沟通协调能力强，有很好的人际关系
+
+
+</textarea></td>
+            </tr>
+            </tbody>
+        </table>
+        <table width="690"
+               border="1" align="center" cellspacing="0" bordercolorlight="#D1D1D1" bordercolordark="#ecf9ff" bgcolor="#ffffff" class="f12">
+            <tbody>
+            <tr>
+                <td width="70" height="72" align="middle" bgcolor="#ecf9ff">请描述<br />
+                    你理想<br />
+                    的工作</td>
+                <td colspan="5" bgcolor="#ecf9ff"><textarea name="textarea3" rows="5" cols="80">
+1：环境气氛--舒适
+2：人际关系--和谐
+3：工作生活--积极
+4：理想梦想--有阶段的向上希望
+</textarea></td>
+            </tr>
+            </tbody>
+        </table>
+        <table width="690"
+               border="1" align="center" cellspacing="0" bordercolorlight="#D1D1D1" bordercolordark="#ecf9ff" bgcolor="#ffffff" class="f12">
+            <tbody>
+            <tr>
+                <td width="70" height="72" align="middle">请描述<br />
+                    你理想<br />
+                    的公司</td>
+                <td colspan="5"><textarea name="textarea4" rows="5" cols="80">
+1：学东西
+2：同成长
+3：互补助
+
+
+</textarea></td>
+            </tr>
+            </tbody>
+        </table>
+        <table width="690"
+               border="1" align="center" cellpadding="0" cellspacing="0" bordercolordark="#ecf9ff" bgcolor="#ecf9ff" class="f12">
+            <tbody>
+            <tr>
+                <td align="middle" width="90" bgcolor="#ebebeb" height="24">欲从事职位一</td>
+                <td width="220"><input onPropertyChange="blank(this)" class="alcatel" maxlength="20" value="Java研发工程师" name="hj2" /></td>
+                <td align="middle" width="100" bgcolor="#ebebeb">欲从事职位二</td>
+                <td width="220"><input onPropertyChange="blank(this)" class="alcatel" maxlength="20" value="公务员" name="hj3" /></td>
+            </tr>
+            <tr>
+                <td align="middle">要求待遇(月薪)</td>
+                <td><input onPropertyChange="blank(this)" class="alcatel" maxlength="5" size="5" value="7K" name="yqdy" />
+                    元</td>
+                <td align="middle"> </td>
+                <td> </td>
+            </tr>
+            </tbody>
+        </table>
+        <table width="690" border="1" align="center" cellspacing="0" bordercolorlight="#D1D1D1" bordercolordark="#ecf9ff" bgcolor="#ecf9ff">
+            <tr>
+                <td>
+                    <div align="center" style="padding:10px;">
+                        <input onPropertyChange="blank(this)" class="btn_mouseout"
+                               οnmοuseοver="this.className='btn_mouseover'"
+                               οnmοuseοut="this.className='btn_mouseout'"
+                               οnmοusedοwn="this.className='btn_mousedown'"
+                               οnmοuseup="this.className='btn_mouseup'"
+                               οnfοcus="if(this.blur)this.blur()" type="submit" value="提交" name="Submit">
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    <meta name="description" content="还是在分享源代码之前，先晒一下照片 原图是这样的，然后随便点一张小图 它会慢慢的看似拼凑出点的那张图的大图】 这里要注意，是慢慢拼凑出，而且再点击一下这个大图，这个大图又会慢慢分散成原来分散的小图片 " />
+    <meta property="og:description" content="还是在分享源代码之前，先晒一下照片 原图是这样的，然后随便点一张小图 它会慢慢的看似拼凑出点的那张图的大图】 这里要注意，是慢慢拼凑出，而且再点击一下这个大图，这个大图又会慢慢分散成原来分散的小图片 " />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>炫酷照片墙，代码简单易懂 - 风中摇曳的小花朵 - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.svg" type="image/svg+xml" />
+
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=R2wBwmwSMG0Sqiw8GFSVjHT4Payg_JFAn51R8XcuvN0" />
+    <link id="MainCss" rel="stylesheet" href="/skins/lessismoreright/bundle-lessismoreright.min.css?v=00nt3ajQUVX0gvFynxRY-4TOqQaW32yFChuBOrvOqLk" />
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/qishuang/custom.css?v=iFdvqNnUPeQjRn0abP4UekAGbmw=" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/lessismoreright/bundle-lessismoreright-mobile.min.css?v=T18a3k5kiM6yjT3PEhsWyUDAeN0oPJGaEKNO0ikIeUI" />
+
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/qishuang/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/qishuang/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/qishuang/wlwmanifest.xml" />
+    <script>
+        var currentBlogId = 313728;
+        var currentBlogApp = 'qishuang';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var isBlogOwner = false;
+        var skinName = 'LessIsMoreRight';
+        var visitorUserId = '';
+    </script>
+    <script>
+        var currentPostDateAdded = '2017-07-21 02:42';
+    </script>
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=fF0V4GI7mbdrRh5FVzZECWvuJT-UrF5wINdTKezXLFA"></script>
+
+
+
+</head>
+<body class="no-navbar">
+<input class="button" name="Submit " type="submit" value="返回" onclick="javascript:history.back()"  style="background-color:yellowgreen"/>
+<a name="top"></a>
+<div id="bannerbar" class="bannerbar-mobile formobile">
+    <a href="https://brands.cnblogs.com/aws/free?source=mobile-banner" target="_blank" onclick="ga('send', 'event', 'Link', 'click', 'aws-mobile-bannerbar')">
+        <img src="https://img2020.cnblogs.com/blog/35695/202012/35695-20201211073419417-355442931.jpg" alt="" />
+    </a>
+</div>
+<div id="top_nav" class="navbar forpc navbar-custom">
+    <nav id="nav_main" class="navbar-main">
+
+        <ul id="nav_right" class="navbar-list navbar-right">
+            <li>
+                <form id="zzk_search" class="navbar-search" action="https://zzk.cnblogs.com/s" method="get">
+                    <input name="w" id="zzk_search_input" placeholder="财富" type="text" tabindex="3" />
+                    <button type="submit" id="zzk_search_button">
+                        <img src="/images/aggsite/search.svg" alt="搜索" />
+                    </button>
+                </form>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<div id="page_begin_html">
+    <script>loadPageBeginHtml();</script>
+</div>
+<div id="home">
+    <div id="header">
+        <div id="blogTitle">
+            <div class="title"><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/qishuang/">我是风中摇曳的小花朵</a>
+            </div>
+            <div class="subtitle"></div>
+
+        </div>
+        <div id="navigator">
+
+            <ul id="navList">
+                <li id="nav_sitehome"><a id="blog_nav_sitehome" class="menu">
+                    博客园</a>
+                </li>
+                <li id="nav_myhome">
+                    <a id="blog_nav_myhome" class="menu" >
+                        首页</a>
+                </li>
+                <li id="nav_newpost">
+
+                    <a id="blog_nav_newpost" class="menu" >
+                        新随笔</a>
+                </li>
+                <li id="nav_contact">
+                    <a id="blog_nav_contact" class="menu">
+                        联系</a></li>
+                <li id="nav_rss">
+                    <a id="blog_nav_rss" class="menu" href="javascript:void(0)" >
+                        订阅</a></li>
+                <li id="nav_admin">
+                    <a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+                        管理</a>
+                </li>
+            </ul>
+
+            <div class="blogStats">
+
+                <span id="stats_post_count">随笔 - 120&nbsp;</span>
+                <span id="stats_article_count">文章 - 0&nbsp;</span>
+                <!-- <span id="stats-comment_count"></span> -->
+                <span id="stats_comment_count">评论 - 337</span>
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <div id="mainContent">
+            <div class="forFlow">
+                <div id="post_detail">
+                    <div id="topics">
+                        <div class="post">
+                            <h1 class="postTitle">
+
+                                <a id="cb_post_title_url" class="postTitle2 vertical-middle" >
+                                    <span>我将无我，不负相遇</span>
+
+
+
+                                </a>
+
+                            </h1>
+                            <div class="clear"></div>
+                            <div class="postBody">
+
+                                <div id="cnblogs_post_body" class="blogpost-body">
+                                    <p> 三百年的爱恋，温暖了世人清瘦的心房。</p>
+                                    <p><img src="img/3.jpg" alt="" width="940" height="568"></p>
+                                    <p>世间安有双全法，不负如来不负卿。</p>
+                                    <p> 最好不相遇，如此便可不相聚。</p>
+                                    <p><img src="img/31.jpg" alt="" width="600" height="319"></p>
+                                    <p>&nbsp;</p>
+                                    <p>仓英嘉措</p>
+
+
+    </div>
+</div>
+                            <embed  src="安和桥.mp3" width="222" height="222" autostart="true" loop="true" hidden="false"  ></embed>
+
+</body>
+</html>

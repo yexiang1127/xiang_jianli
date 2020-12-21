@@ -1,0 +1,360 @@
+/*https://www.cnblogs.com/jerehedu/p/7358329.html*/
+/*弹性布局参考网站:https://www.cnblogs.com/fatty-yu/p/8758818.html*/
+/*删除浏览器这些默认值，方便后面的设置。（注：不是没它不行，只是方便而已）*/
+* {
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    display: flex;
+    text-align:center;    /* 文字居中 */
+    background-color: black;
+}
+ul
+{
+    flex-wrap: nowrap;
+    list-style-type:none; /* ul前面的点  */
+    background-color: #fcff18;
+}
+
+.menu
+{
+    width: 100%;
+    height: 80px;
+    background: black; /* 导航条背景的颜色  */
+    float: left;
+    font-size:25px;
+
+}
+.nav
+{
+    margin:0 auto;     /* 导航栏文字的位置  */
+    width:700px;   /* 和文字宽度有关，不能小于文字宽度的总和  */
+    height:80px;   /* 导航栏的宽度  */
+    background-color: black;
+}
+.logo{
+
+}
+.nav a
+{
+    float:left;              /* 导航栏的位置配置 */
+    width:90px;           /* 选中的文字块的长度  */
+    line-height:80px;              /* 选中的文字块的宽度  */
+    text-decoration: none;               /* 去掉连接下划线  */
+    font-weight:bold;
+    font-size:13px;           /* 字体大小 */
+    color: #FFFFFF;           /* 字体颜色 */
+}
+.nav li a:hover {
+    background-color: #D8D8D8; /* 选中的文字块的颜色 */
+    text-decoration: none; /* 选中时去掉连接下划线 */
+}
+.nav li a:link{
+    text-decoration:none; /* 连接被点之后没有下划线  */
+}
+
+.bigbox{
+    /*text-align: justify;*/
+    padding: 0px;
+    margin: 0px;
+    width: auto;
+    height: auto;
+    background-color: #53bdff;
+}
+#p
+{
+    padding: 0px;
+
+    margin-right: 0px;
+    width:100%;
+    height:900px;
+    /*background: #F9F0DA;*/
+    animation:myfirst 10s;
+    -webkit-animation:myfirst 10s; /* Safari and Chrome 只适配Safari and Chrome，得去适配其他浏览器*/
+    -moz-animation:myfirst 10s;/*Firefox*/
+    -o-animation: myfirst 10s ;/*Opera */
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+}
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+    0%   {background:url("../../Desktop/img/1.jpg");
+    }
+    10%  {background: url("../../Desktop/img/2.jpg");
+
+    }
+    20%  {background: url("../../Desktop/img/3.jpg");}
+    30% {background: url("../../Desktop/img/4.jpg");}
+    40%   {background: url("../../Desktop/img/15.jpg");}
+    50%  {background: url("../../Desktop/img/6.jpg");}
+    60%  {background: url("../../Desktop/img/7.jpg");}
+    70%   {background: url("../../Desktop/img/8.jpg");}
+    80%  {background: url("../../Desktop/img/9.jpg");}
+    90%  {background: url("../../Desktop/img/25.jpg");}
+    100% {background: url("../../Desktop/img/41.jpg");}
+}
+@-moz-keyframes myfirst /*Firefox*/
+{
+    0%   {background:url("../../Desktop/img/1.jpg");
+    }
+    10%  {background: url("../../Desktop/img/2.jpg");
+
+    }
+    20%  {background: url("../../Desktop/img/3.jpg");}
+    30% {background: url("../../Desktop/img/4.jpg");}
+    40%   {background: url("../../Desktop/img/15.jpg");}
+    50%  {background: url("../../Desktop/img/6.jpg");}
+    60%  {background: url("../../Desktop/img/7.jpg");}
+    70%   {background: url("../../Desktop/img/8.jpg");}
+    80%  {background: url("../../Desktop/img/9.jpg");}
+    90%  {background: url("../../Desktop/img/23.jpg");}
+    100% {background: url("../../Desktop/img/41.jpg");}
+
+}
+@-o-keyframes myfirst /*Opera */
+{
+    0%   {background:url("../../Desktop/img/1.jpg");
+    }
+    10%  {background: url("../../Desktop/img/2.jpg");
+
+    }
+    20%  {background: url("../../Desktop/img/3.jpg");}
+    30% {background: url("../../Desktop/img/4.jpg");}
+    40%   {background: url("../../Desktop/img/15.jpg");}
+    50%  {background: url("../../Desktop/img/6.jpg");}
+    60%  {background: url("../../Desktop/img/7.jpg");}
+    70%   {background: url("../../Desktop/img/8.jpg");}
+    80%  {background: url("../../Desktop/img/9.jpg");}
+    90%  {background: url("../../Desktop/img/23.jpg");}
+    100% {background: url("../../Desktop/img/41.jpg");}
+
+}
+
+.box{
+    /*display: inline-block;*/
+    margin: 0px;
+    background-color: #121112;
+    width:auto;
+    height: 500px;
+    display: -moz-box;/*firefox*/
+    display: -webkit-box;/*Safari and Chrome*/
+}
+/*所有包含了son的class元素*/
+div[class *="son"]{
+    float: top;
+    /*外边距（上右下左）*/
+    margin:0px 80px 0px 0px;
+    width: 800px;
+    height: 500px;
+}
+.section {
+    background-color: #908c91;
+    margin: 0px;
+    height: 500px;
+    display: -moz-box;/*firefox*/
+    display: -webkit-box;/*Safari and Chrome*/
+}
+.demo{
+    flex-wrap: nowrap;
+    /*设置边框阴影*/
+    box-shadow: 0px 0px 10px #908c91 inset;
+    background-color: #FFFFFF;
+    width:300px;
+    height:450px;
+    margin:15px;
+    padding:10px;
+    background-size:contain;/*contain：当使用该属性时，图片被缩放至最大且能被完全展示出来，但是由于图片的的尺寸比例与div的尺寸比例会有不同，所以当图片不能盖住div时，图片会自动平铺。*/
+}
+#footer {
+    width: 100%;
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    display: flex;
+    text-align:center;    /* 文字居中 */
+    background-color: black;
+}
+ul
+{
+    flex-wrap: nowrap;
+    list-style-type:none; /* ul前面的点  */
+    background-color: #fcff18;
+}
+
+.menu
+{
+    width: 100%;
+    height: 80px;
+    background: black; /* 导航条背景的颜色  */
+    float: left;
+    font-size:25px;
+
+}
+.nav
+{
+    margin:0 auto;     /* 导航栏文字的位置  */
+    width:700px;   /* 和文字宽度有关，不能小于文字宽度的总和  */
+    height:80px;   /* 导航栏的宽度  */
+    background-color: black;
+}
+.logo{
+
+}
+.nav a
+{
+    float:left;              /* 导航栏的位置配置 */
+    width:90px;           /* 选中的文字块的长度  */
+    line-height:80px;              /* 选中的文字块的宽度  */
+    text-decoration: none;               /* 去掉连接下划线  */
+    font-weight:bold;
+    font-size:13px;           /* 字体大小 */
+    color: #FFFFFF;           /* 字体颜色 */
+}
+.nav li a:hover {
+    background-color: #D8D8D8; /* 选中的文字块的颜色 */
+    text-decoration: none; /* 选中时去掉连接下划线 */
+}
+.nav li a:link{
+    text-decoration:none; /* 连接被点之后没有下划线  */
+}
+
+.bigbox{
+    /*text-align: justify;*/
+    padding: 0px;
+    margin: 0px;
+    width: auto;
+    height: auto;
+    background-color: #53bdff;
+}
+#p
+{
+    padding: 0px;
+
+    margin-right: 0px;
+    width:100%;
+    height:900px;
+    /*background: #F9F0DA;*/
+    animation:myfirst 10s;
+    -webkit-animation:myfirst 10s; /* Safari and Chrome 只适配Safari and Chrome，得去适配其他浏览器*/
+    -moz-animation:myfirst 10s;/*Firefox*/
+    -o-animation: myfirst 10s ;/*Opera */
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+}
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+    0%   {background:url("../../Desktop/img/29.jpg");
+    }
+    10%  {background: url("../../Desktop/img/27.jpg");
+
+    }
+    20%  {background: url("../../Desktop/img/31.jpg");}
+    30% {background: url("../../Desktop/img/23.jpg");}
+    40%   {background: url("../../Desktop/img/41.jpg");}
+    50%  {background: url("../../Desktop/img/6.jpg");}
+    60%  {background: url("../../Desktop/img/7.jpg");}
+    70%   {background: url("../../Desktop/img/8.jpg");}
+    80%  {background: url("../../Desktop/img/9.jpg");}
+    90%  {background: url("../../Desktop/img/23.jpg");}
+    100% {background: url("../../Desktop/img/41.jpg");}
+}
+@-moz-keyframes myfirst /*Firefox*/
+{
+    0%   {background:url("../../Desktop/img/1.jpg");
+    }
+    10%  {background: url("../../Desktop/img/2.jpg");
+
+    }
+    20%  {background: url("img/timg.jpg");}
+    30% {background: url("../../Desktop/img/4.jpg");}
+    40%   {background: url("../../Desktop/img/15.jpg");}
+    50%  {background: url("../../Desktop/img/6.jpg");}
+    60%  {background: url("../../Desktop/img/7.jpg");}
+    70%   {background: url("../../Desktop/img/8.jpg");}
+    80%  {background: url("../../Desktop/img/9.jpg");}
+    90%  {background: url("img/10 .jpg");}
+    100% {background: url("img/11.jpg");}
+
+}
+@-o-keyframes myfirst /*Opera */
+{
+    0%   {background:url("../../Desktop/img/1.jpg");
+    }
+    10%  {background: url("../../Desktop/img/2.jpg");
+
+    }
+    20%  {background: url("../../Desktop/img/3.jpg");}
+    30% {background: url("../../Desktop/img/4.jpg");}
+    40%   {background: url("../../Desktop/img/15.jpg");}
+    50%  {background: url("../../Desktop/img/6.jpg");}
+    60%  {background: url("../../Desktop/img/7.jpg");}
+    70%   {background: url("../../Desktop/img/8.jpg");}
+    80%  {background: url("../../Desktop/img/9.jpg");}
+    90%  {background: url("../../Desktop/img/25.jpg");}
+    100% {background: url("../../Desktop/img/41.jpg");}
+
+}
+
+.box{
+    /*display: inline-block;*/
+    margin: 0px;
+    background-color: #121112;
+    width:auto;
+    height: 500px;
+    display: -moz-box;/*firefox*/
+    display: -webkit-box;/*Safari and Chrome*/
+}
+/*所有包含了son的class元素*/
+div[class *="son"]{
+    float: top;
+    /*外边距（上右下左）*/
+    margin:0px 80px 0px 0px;
+    width: 800px;
+    height: 500px;
+}
+.section {
+    background-color: #908c91;
+    margin: 0px;
+    height: 500px;
+    display: -moz-box;/*firefox*/
+    display: -webkit-box;/*Safari and Chrome*/
+}
+.demo{
+    flex-wrap: nowrap;
+    /*设置边框阴影*/
+    box-shadow: 0px 0px 10px #908c91 inset;
+    background-color: #FFFFFF;
+    width:300px;
+    height:450px;
+    margin:15px;
+    padding:10px;
+    background-size:contain;/*contain：当使用该属性时，图片被缩放至最大且能被完全展示出来，但是由于图片的的尺寸比例与div的尺寸比例会有不同，所以当图片不能盖住div时，图片会自动平铺。*/
+}
+#footer {
+    width: 100%;
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;
+}
+.button{
+    width: 100px;
+    height: 30px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    background-color: #008B8B;
+    font-style:#fff;
+}
